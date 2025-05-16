@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TinyTechie - Learn Coding & Web Dev</title>
+  <link rel="icon" href="title.png" type="image/png" />
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <img src="title.png" alt="TinyTechie Logo" class="logo">
+        <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <br>
+  <div class="weekly-schedule">
+    <div class="day">
+        <h3>MONDAY</h3>
+        <p>TELUGU</p>
+    </div>
+    <div class="day">
+        <h3>TUESDAY</h3>
+        <p>ENGLISH</p>
+    </div>
+    <div class="day">
+        <h3>WEDNSDAY</h3>
+        <p>MATHS</p>
+    </div>
+    <div class="day">
+        <h3>THURSDAY</h3>
+        <p>SCIENCE</p>
+    </div>
+    <div class="day">
+        <h3>FRIDAY</h3>
+        <p>SOCIAL</p>
+    </div>
+    <div class="day">
+        <h3>SATURDAY</h3>
+        <p>CODING</p>
+    </div>
+    <div class="day">
+        <h3>SUNDAY</h3>
+        <p>FUN DAY</p>
+    </div>
+  </div>
+  <section id="home" class="hero-section">
+    <img src="backimg.png" alt="TinyTechie" class="hero-bg">
+    <div class="hero-text">
+      <h1>Welcome to TinyTechie</h1>
+      <p>Fun & Interactive Coding and Web Development for Grades 6 to 9</p>
+      <button onclick="scrollToSection('courses')">Explore Courses</button>
+    </div>
+  </section>
+
+  <section id="courses" class="courses">
+    <h2>Our Courses</h2>
+    <div class="course-list">
+      <div class="course-card">
+        <h3>Python Programming</h3>
+        <p>Learn the basics of Python with games and fun exercises.</p>
+      </div>
+      <div class="course-card">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, and JavaScript to build cool websites.</p>
+      </div>
+      <div class="course-card">
+        <h3>Game Development</h3>
+        <p>Build interactive games with Python or JS libraries.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About TinyTechie</h2>
+    <p>We are passionate about making coding fun and meaningful for kids!</p>
+    <p><a href="demo.html" target="_blank">Click here</a> to book demo</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="form-response"></div>
+  </section><br>
+
+  <footer>
+    <p>&copy; 2025 TinyTechie | Made with ❤️</p>
+    <a href="">Instagram ||</a>
+    <a href="">facebook</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

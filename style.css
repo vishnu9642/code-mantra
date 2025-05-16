@@ -1,0 +1,285 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f0f4ff, #dfe9f3);
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background-color: #040836;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-size: larger;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffb703;
+  
+}
+.weekly-schedule {
+  animation: color-changer 5s infinite alternate-reverse;
+  display: flex;
+  gap: 2em;
+  padding: 2em;
+  justify-content: center;
+  border-radius: 10px;
+}
+@keyframes color-changer {
+  0%, 100% {
+    background: linear-gradient(rgb(255, 0, 247), skyblue);
+  }
+  50% {
+    background: linear-gradient(skyblue,rgb(255, 0, 247));
+  }
+}
+.day p{
+    padding-top: 35px;
+    justify-content: center;
+}
+.day:hover{
+    transform: translate(1.5em);
+}
+.day {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: 250px;
+  height: 200px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+    animation: colour-changer1 5s infinite;
+}
+@keyframes colour-changer1 {
+    0%, 100% {
+    background: linear-gradient( silver, yellow);
+  }
+  50% {
+    background: linear-gradient( yellow, silver,);
+  }
+}
+
+.hero-section {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 4s infinite;
+  z-index: 1;
+}
+.hero-bg{
+  position:absolute;
+  top: 85%;
+  left: 0;
+  width: 80%;           /* adjust width here */
+  height: 90%;         /* keep the aspect ratio */
+  opacity: 0.2;
+  z-index: -1;
+  margin-left: 10%;     /* optional centering */
+
+}
+
+@keyframes fadeIn {
+  from { color:darkviolet; }
+  to { color:crimson; }
+}
+
+.hero-text h1 {
+    z-index: 1;
+  font-size: 3em;
+  animation: slideInDown 1.2s ease;
+}
+.hero-text p:hover{
+    color: blue;
+}
+.hero-text h1:hover{
+    color: blue;
+}
+
+@keyframes slideInDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+button {
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  background-color: #ffb703;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  z-index: 1;
+  animation: button 3s infinite;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-image: linear-gradient(to right, rgb(255, 0, 247), skyblue);
+}
+
+.course-list {
+  display: flex;
+  gap: 2em;
+  padding: 2em;
+  justify-content: center;
+}
+
+.course-card {
+  background-color: whitesmoke;
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: 250px;
+}
+
+.course-card:hover {
+    background-color: #ffb703;
+  transform: translateY(-5px);
+  transform: scale(0.5px);
+}
+
+.about, .contact {
+  padding: 2em;
+  background: #eef1f6;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 300px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 0.8em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+footer {
+  padding: 1em;
+  background-color: #040836;
+  color: white;
+  text-align: center;
+}
+
+/* For tablets (between 601px and 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .weekly-schedule {
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em;
+  }
+
+  .day {
+    width: 45%;
+    height: auto;
+  }
+
+  .course-list {
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  .course-card {
+    width: 45%;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2em;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.8em;
+    padding-top: 1em;
+  }
+
+  .hero-section {
+    height: auto;
+    padding: 2em 1em;
+  }
+}
+
+/* For mobile devices (600px and below) */
+@media (max-width: 600px) {
+  .weekly-schedule {
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+  }
+
+  .day {
+    width: 90%;
+    height: auto;
+  }
+
+  .course-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .course-card {
+    width: 90%;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8em;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5em;
+    padding-top: 1em;
+  }
+
+  .hero-section {
+    height: auto;
+    padding: 2em 1em;
+  }
+
+  form {
+    width: 90%;
+  }
+}
+
